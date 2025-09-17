@@ -2,6 +2,7 @@ import inquirer from "inquirer";
 import Logger from "../utils/logger.js";
 import database from "../utils/database.js";
 import config from "../utils/config.js";
+import fs from "fs";
 
 /**
  * Add command handler
@@ -20,8 +21,17 @@ async function addCommand(collection, options) {
 
     let documentData;
 
-    // Check if data is provided via options (for non-interactive mode)
-    if (options.data) {
+    // Support for seeding from a JSON file
+    if (options.file) {
+      try {
+        const fileContent = fs.readFileSync(options.file, "utf-8");
+        documentData = JSON.parse(fileContent);
+        Logger.info(`Loaded data from file: ${options.file}`);
+      } catch (error) {
+        Logger.error("Failed to read or parse JSON file: " + error.message);
+        return;
+      }
+    } else if (options.data) {
       try {
         documentData = JSON.parse(options.data);
         Logger.info("Using provided JSON data");
@@ -38,19 +48,29 @@ async function addCommand(collection, options) {
     // Get the model for the collection
     const Model = database.getModel(collection);
 
-    // Create new document
-    const document = new Model(documentData);
-    const savedDocument = await document.save();
-
-    Logger.success(`Document added successfully!`);
-    Logger.data(savedDocument.toObject());
+    // Support for multiple documents
+    if (Array.isArray(documentData)) {
+      // Insert many documents
+      const savedDocuments = await Model.insertMany(documentData);
+      Logger.success(`Added ${savedDocuments.length} documents successfully!`);
+      savedDocuments.forEach((doc, idx) => {
+        Logger.data(doc.toObject());
+        Logger.info(`Document ${idx + 1} ID: ${doc._id}`);
+      });
+    } else {
+      // Single document
+      const document = new Model(documentData);
+      const savedDocument = await document.save();
+      Logger.success(`Document added successfully!`);
+      Logger.data(savedDocument.toObject());
+      Logger.info(`Document ID: ${savedDocument._id}`);
+    }
 
     // Update statistics
     config.incrementOperation("add");
     config.set("lastUsedCollection", collection);
 
     Logger.separator();
-    Logger.info(`Document ID: ${savedDocument._id}`);
   } catch (error) {
     Logger.error("Failed to add document: " + error.message);
   } finally {

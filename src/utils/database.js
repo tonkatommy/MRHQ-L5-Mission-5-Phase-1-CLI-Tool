@@ -19,9 +19,7 @@ class Database {
 
       Logger.info("Connecting to MongoDB...");
 
-      await mongoose.connect(process.env.MONGODB_URI, {
-        // ...other options...
-      });
+      await mongoose.connect(process.env.MONGODB_URI);
 
       this.isConnected = true;
       Logger.success("Connected to MongoDB successfully");
