@@ -1,9 +1,12 @@
 {
-  "name": "mission-5-phase-1",
+  "name": "mission-5-phase-1-mongodb-cli-tool",
   "version": "1.0.0",
-  "description": "Phase 1 of Mission 5 for L5 Advanced",
+  "description": "Phase 1 of Mission 5 for L5 Advanced. A CLI tool to manage a MongoDB database using Mongoose.",
   "type": "module",
   "main": "src/app.js",
+  "bin": {
+    "mongo-cli": "./src/app.js"
+  },
   "scripts": {
     "dev": "nodemon src/app.js",
     "start": "node src/app.js",
