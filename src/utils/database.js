@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import Logger from "./logger";
-import config from "./config";
+import Logger from "./logger.js";
+import config from "./config.js";
 
 class Database {
   constructor() {

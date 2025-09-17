@@ -1,12 +1,15 @@
-import { existsSync, readFileSync, writeFileSync } from "fs";
-import { join } from "path";
-import { warning, error as _error } from "./logger";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import Logger from "./logger.js";
 
-// Configuration management class
-// Handles loading, saving, and updating config settings
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 class Config {
   constructor() {
-    this.configPath = join(__dirname, "../../config.json");
+    this.configPath = path.join(__dirname, "../../config.json");
     this.defaultConfig = {
       lastUsedCollection: "users",
       operations: {
@@ -24,15 +27,15 @@ class Config {
    */
   loadConfig() {
     try {
-      if (existsSync(this.configPath)) {
-        const data = readFileSync(this.configPath, "utf8");
+      if (fs.existsSync(this.configPath)) {
+        const data = fs.readFileSync(this.configPath, "utf8");
         this.config = { ...this.defaultConfig, ...JSON.parse(data) };
       } else {
         this.config = { ...this.defaultConfig };
         this.saveConfig();
       }
     } catch (error) {
-      warning("Could not load config file, using defaults");
+      Logger.warning("Could not load config file, using defaults");
       this.config = { ...this.defaultConfig };
     }
   }
@@ -42,9 +45,9 @@ class Config {
    */
   saveConfig() {
     try {
-      writeFileSync(this.configPath, JSON.stringify(this.config, null, 2));
+      fs.writeFileSync(this.configPath, JSON.stringify(this.config, null, 2));
     } catch (error) {
-      _error("Failed to save configuration: " + error.message);
+      Logger.error("Failed to save configuration: " + error.message);
     }
   }
 

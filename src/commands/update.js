@@ -1,7 +1,7 @@
 import inquirer from "inquirer";
-import Logger from "../utils/logger";
-import database from "../utils/database";
-import config from "../utils/config";
+import Logger from "../utils/logger.js";
+import database from "../utils/database.js";
+import config from "../utils/config.js";
 
 /**
  * Update command handler
