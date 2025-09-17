@@ -20,8 +20,7 @@ class Database {
       Logger.info("Connecting to MongoDB...");
 
       await mongoose.connect(process.env.MONGODB_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
+        // ...other options...
       });
 
       this.isConnected = true;

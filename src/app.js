@@ -39,11 +39,13 @@ program
 // Add command
 program
   .command("add <collection>")
-  .description("Add a new document to the specified collection")
+  .description(
+    "Add a new document to the specified collection\n" +
+    "  Example: mongo-cli add users\n" +
+    "  Example: mongo-cli add users -d '{\"name\":\"John\",\"age\":30}'"
+  )
   .option("-d, --data <json>", "JSON data for the document (non-interactive mode)")
   .option("--dry-run", "Show what would be added without actually adding")
-  .example("mongo-cli add users", "Add a document to users collection (interactive)")
-  .example('mongo-cli add users -d \'{"name":"John","age":30}\'', "Add a document with JSON data")
   .action(async (collection, options) => {
     try {
       if (options.dryRun) {
@@ -59,15 +61,14 @@ program
 // Update command
 program
   .command("update <collection>")
-  .description("Update documents in the specified collection")
+  .description(
+    "Update documents in the specified collection\n" +
+    "  Example: mongo-cli update users\n" +
+    "  Example: mongo-cli update users -q '{\"name\":\"John\"}' -d '{\"age\":31}'"
+  )
   .option("-q, --query <json>", "JSON query to find documents to update")
   .option("-d, --data <json>", "JSON data for the update")
   .option("--dry-run", "Show what would be updated without actually updating")
-  .example("mongo-cli update users", "Update documents in users collection (interactive)")
-  .example(
-    'mongo-cli update users -q \'{"name":"John"}\' -d \'{"age":31}\'',
-    "Update with JSON query and data"
-  )
   .action(async (collection, options) => {
     try {
       if (options.dryRun) {
@@ -84,12 +85,14 @@ program
 program
   .command("delete <collection>")
   .alias("del")
-  .description("Delete documents from the specified collection")
+  .description(
+    "Delete documents from the specified collection\n" +
+    "  Example: mongo-cli delete users\n" +
+    "  Example: mongo-cli delete users -q '{\"status\":\"inactive\"}'"
+  )
   .option("-q, --query <json>", "JSON query to find documents to delete")
   .option("--force", "Skip confirmation prompts (DANGEROUS!)")
   .option("--dry-run", "Show what would be deleted without actually deleting")
-  .example("mongo-cli delete users", "Delete documents from users collection (interactive)")
-  .example('mongo-cli delete users -q \'{"status":"inactive"}\'', "Delete with JSON query")
   .action(async (collection, options) => {
     try {
       if (options.dryRun) {
@@ -139,10 +142,12 @@ program
 // Count documents command
 program
   .command("count <collection>")
-  .description("Count documents in the specified collection")
+  .description(
+    "Count documents in the specified collection\n" +
+    "  Example: mongo-cli count users\n" +
+    "  Example: mongo-cli count users -q '{\"status\":\"active\"}'"
+  )
   .option("-q, --query <json>", "JSON query to count specific documents")
-  .example("mongo-cli count users", "Count all documents in users collection")
-  .example('mongo-cli count users -q \'{"status":"active"}\'', "Count documents matching query")
   .action(async (collection, options) => {
     try {
       logger.header(`Counting documents in '${collection}' collection`);
@@ -181,13 +186,15 @@ program
 // Find/Search command
 program
   .command("find <collection>")
-  .description("Find and display documents from the specified collection")
+  .description(
+    "Find and display documents from the specified collection\n" +
+    "  Example: mongo-cli find users\n" +
+    "  Example: mongo-cli find users -q '{\"age\":{\"$gte\":18}}' -l 5"
+  )
   .option("-q, --query <json>", "JSON query to find specific documents")
   .option("-l, --limit <number>", "Limit number of results (default: 10)", "10")
   .option("--skip <number>", "Skip number of documents (default: 0)", "0")
   .option("-s, --sort <json>", "Sort results (e.g., '{\"createdAt\": -1}')")
-  .example("mongo-cli find users", "Find first 10 documents in users collection")
-  .example('mongo-cli find users -q \'{"age":{"$gte":18}}\' -l 5', "Find 5 adult users")
   .action(async (collection, options) => {
     try {
       logger.header(`Finding documents in '${collection}' collection`);
