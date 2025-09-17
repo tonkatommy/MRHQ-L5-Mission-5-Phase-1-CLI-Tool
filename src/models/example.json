@@ -1,0 +1,117 @@
+[
+  { "title": "PS5", "description": "PlayStation 5 Console", "start_price": 500, "reserve_price": 650 },
+  {
+    "title": "iPhone 15",
+    "description": "Latest Apple iPhone 15",
+    "start_price": 800,
+    "reserve_price": 950
+  },
+  {
+    "title": "MacBook Pro",
+    "description": "Apple MacBook Pro 16-inch",
+    "start_price": 2000,
+    "reserve_price": 2500
+  },
+  {
+    "title": "Samsung Galaxy S24",
+    "description": "Samsung Galaxy S24 Smartphone",
+    "start_price": 700,
+    "reserve_price": 850
+  },
+  {
+    "title": "Dell XPS 13",
+    "description": "Dell XPS 13 Laptop",
+    "start_price": 1200,
+    "reserve_price": 1500
+  },
+  {
+    "title": "Sony WH-1000XM5",
+    "description": "Sony Noise Cancelling Headphones",
+    "start_price": 300,
+    "reserve_price": 400
+  },
+  {
+    "title": "Nintendo Switch",
+    "description": "Nintendo Switch Console",
+    "start_price": 300,
+    "reserve_price": 400
+  },
+  {
+    "title": "GoPro HERO12",
+    "description": "GoPro HERO12 Action Camera",
+    "start_price": 400,
+    "reserve_price": 500
+  },
+  {
+    "title": "Apple Watch Series 9",
+    "description": "Apple Watch Series 9",
+    "start_price": 350,
+    "reserve_price": 450
+  },
+  {
+    "title": "Kindle Paperwhite",
+    "description": "Amazon Kindle Paperwhite E-reader",
+    "start_price": 120,
+    "reserve_price": 150
+  },
+  {
+    "title": "Fitbit Charge 6",
+    "description": "Fitbit Charge 6 Fitness Tracker",
+    "start_price": 150,
+    "reserve_price": 200
+  },
+  {
+    "title": "Bose QuietComfort 45",
+    "description": "Bose Noise Cancelling Headphones",
+    "start_price": 280,
+    "reserve_price": 350
+  },
+  {
+    "title": "iPad Air",
+    "description": "Apple iPad Air Tablet",
+    "start_price": 600,
+    "reserve_price": 750
+  },
+  {
+    "title": "Logitech MX Master 3",
+    "description": "Logitech MX Master 3 Mouse",
+    "start_price": 100,
+    "reserve_price": 130
+  },
+  {
+    "title": "Roku Streaming Stick+",
+    "description": "Roku Streaming Stick+ Device",
+    "start_price": 50,
+    "reserve_price": 70
+  },
+  {
+    "title": "Anker PowerCore 10000",
+    "description": "Anker Portable Charger",
+    "start_price": 30,
+    "reserve_price": 50
+  },
+  {
+    "title": "JBL Flip 6",
+    "description": "JBL Flip 6 Bluetooth Speaker",
+    "start_price": 80,
+    "reserve_price": 100
+  },
+  {
+    "title": "Microsoft Surface Pro 9",
+    "description": "Microsoft Surface Pro 9 Tablet",
+    "start_price": 900,
+    "reserve_price": 1100
+  },
+  {
+    "title": "Canon EOS M50",
+    "description": "Canon EOS M50 Mirrorless Camera",
+    "start_price": 600,
+    "reserve_price": 750
+  },
+  {
+    "title": "Samsung T7 Portable SSD",
+    "description": "Samsung T7 Portable SSD Drive",
+    "start_price": 150,
+    "reserve_price": 200
+  }
+]

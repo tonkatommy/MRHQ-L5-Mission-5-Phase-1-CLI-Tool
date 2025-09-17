@@ -41,10 +41,12 @@ program
   .command("add <collection>")
   .description(
     "Add a new document to the specified collection\n" +
-    "  Example: mongo-cli add users\n" +
-    "  Example: mongo-cli add users -d '{\"name\":\"John\",\"age\":30}'"
+      "  Example: mongo-cli add users\n" +
+      '  Example: mongo-cli add users -d \'{"name":"John","age":30}\'\n' +
+      "  Example: mongo-cli add users --file ./data/users.json"
   )
   .option("-d, --data <json>", "JSON data for the document (non-interactive mode)")
+  .option("-f, --file <path>", "Path to JSON file containing document(s) to add")
   .option("--dry-run", "Show what would be added without actually adding")
   .action(async (collection, options) => {
     try {
@@ -63,8 +65,8 @@ program
   .command("update <collection>")
   .description(
     "Update documents in the specified collection\n" +
-    "  Example: mongo-cli update users\n" +
-    "  Example: mongo-cli update users -q '{\"name\":\"John\"}' -d '{\"age\":31}'"
+      "  Example: mongo-cli update users\n" +
+      '  Example: mongo-cli update users -q \'{"name":"John"}\' -d \'{"age":31}\''
   )
   .option("-q, --query <json>", "JSON query to find documents to update")
   .option("-d, --data <json>", "JSON data for the update")
@@ -87,8 +89,8 @@ program
   .alias("del")
   .description(
     "Delete documents from the specified collection\n" +
-    "  Example: mongo-cli delete users\n" +
-    "  Example: mongo-cli delete users -q '{\"status\":\"inactive\"}'"
+      "  Example: mongo-cli delete users\n" +
+      '  Example: mongo-cli delete users -q \'{"status":"inactive"}\''
   )
   .option("-q, --query <json>", "JSON query to find documents to delete")
   .option("--force", "Skip confirmation prompts (DANGEROUS!)")
@@ -144,8 +146,8 @@ program
   .command("count <collection>")
   .description(
     "Count documents in the specified collection\n" +
-    "  Example: mongo-cli count users\n" +
-    "  Example: mongo-cli count users -q '{\"status\":\"active\"}'"
+      "  Example: mongo-cli count users\n" +
+      '  Example: mongo-cli count users -q \'{"status":"active"}\''
   )
   .option("-q, --query <json>", "JSON query to count specific documents")
   .action(async (collection, options) => {
@@ -188,8 +190,8 @@ program
   .command("find <collection>")
   .description(
     "Find and display documents from the specified collection\n" +
-    "  Example: mongo-cli find users\n" +
-    "  Example: mongo-cli find users -q '{\"age\":{\"$gte\":18}}' -l 5"
+      "  Example: mongo-cli find users\n" +
+      '  Example: mongo-cli find users -q \'{"age":{"$gte":18}}\' -l 5'
   )
   .option("-q, --query <json>", "JSON query to find specific documents")
   .option("-l, --limit <number>", "Limit number of results (default: 10)", "10")
