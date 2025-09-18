@@ -9,7 +9,19 @@ const __dirname = path.dirname(__filename);
 
 class Config {
   constructor() {
-    this.configPath = path.join(__dirname, "../../config.json");
+    // Try multiple locations for config.json
+    const possibleConfigPaths = [
+      // 1. In project root
+      path.join(__dirname, "../../config.json"),
+      // 2. In user's home directory
+      path.join(process.env.HOME || process.env.USERPROFILE, ".mongo-cli-config.json"),
+      // 3. In same directory as executable
+      path.join(__dirname, "../config.json"),
+    ];
+
+    // Find existing config or use first path as default
+    this.configPath = possibleConfigPaths.find((p) => fs.existsSync(p)) || possibleConfigPaths[1];
+
     this.defaultConfig = {
       lastUsedCollection: "users",
       operations: {
