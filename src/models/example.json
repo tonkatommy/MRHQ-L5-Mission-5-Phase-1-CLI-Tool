@@ -1,0 +1,717 @@
+[
+  { "title": "PS5", "description": "PlayStation 5 Console", "start_price": 500, "reserve_price": 650 },
+  {
+    "title": "iPhone 15",
+    "description": "Latest Apple iPhone 15",
+    "start_price": 800,
+    "reserve_price": 950
+  },
+  {
+    "title": "MacBook Pro",
+    "description": "Apple MacBook Pro 16-inch",
+    "start_price": 2000,
+    "reserve_price": 2500
+  },
+  {
+    "title": "Samsung Galaxy S24",
+    "description": "Samsung Galaxy S24 Smartphone",
+    "start_price": 700,
+    "reserve_price": 850
+  },
+  {
+    "title": "Dell XPS 13",
+    "description": "Dell XPS 13 Laptop",
+    "start_price": 1200,
+    "reserve_price": 1500
+  },
+  {
+    "title": "Sony WH-1000XM5",
+    "description": "Sony Noise Cancelling Headphones",
+    "start_price": 300,
+    "reserve_price": 400
+  },
+  {
+    "title": "Nintendo Switch",
+    "description": "Nintendo Switch Console",
+    "start_price": 300,
+    "reserve_price": 400
+  },
+  {
+    "title": "GoPro HERO12",
+    "description": "GoPro HERO12 Action Camera",
+    "start_price": 400,
+    "reserve_price": 500
+  },
+  {
+    "title": "Apple Watch Series 9",
+    "description": "Apple Watch Series 9",
+    "start_price": 350,
+    "reserve_price": 450
+  },
+  {
+    "title": "Kindle Paperwhite",
+    "description": "Amazon Kindle Paperwhite E-reader",
+    "start_price": 120,
+    "reserve_price": 150
+  },
+  {
+    "title": "Fitbit Charge 6",
+    "description": "Fitbit Charge 6 Fitness Tracker",
+    "start_price": 150,
+    "reserve_price": 200
+  },
+  {
+    "title": "Bose QuietComfort 45",
+    "description": "Bose Noise Cancelling Headphones",
+    "start_price": 280,
+    "reserve_price": 350
+  },
+  {
+    "title": "iPad Air",
+    "description": "Apple iPad Air Tablet",
+    "start_price": 600,
+    "reserve_price": 750
+  },
+  {
+    "title": "Logitech MX Master 3",
+    "description": "Logitech MX Master 3 Mouse",
+    "start_price": 100,
+    "reserve_price": 130
+  },
+  {
+    "title": "Roku Streaming Stick+",
+    "description": "Roku Streaming Stick+ Device",
+    "start_price": 50,
+    "reserve_price": 70
+  },
+  {
+    "title": "Anker PowerCore 10000",
+    "description": "Anker Portable Charger",
+    "start_price": 30,
+    "reserve_price": 50
+  },
+  {
+    "title": "JBL Flip 6",
+    "description": "JBL Flip 6 Bluetooth Speaker",
+    "start_price": 80,
+    "reserve_price": 100
+  },
+  {
+    "title": "Microsoft Surface Pro 9",
+    "description": "Microsoft Surface Pro 9 Tablet",
+    "start_price": 900,
+    "reserve_price": 1100
+  },
+  {
+    "title": "Canon EOS M50",
+    "description": "Canon EOS M50 Mirrorless Camera",
+    "start_price": 600,
+    "reserve_price": 750
+  },
+  {
+    "title": "Samsung T7 Portable SSD",
+    "description": "Samsung T7 Portable SSD Drive",
+    "start_price": 150,
+    "reserve_price": 200
+  },
+  {
+    "title": "Tesla Model 3 Wheel Set",
+    "description": "Complete set of Tesla Model 3 alloy wheels with tires",
+    "start_price": 1200,
+    "reserve_price": 1500
+  },
+  {
+    "title": "Vintage Rolex Submariner",
+    "description": "1980s Rolex Submariner Watch in excellent condition",
+    "start_price": 8000,
+    "reserve_price": 12000
+  },
+  {
+    "title": "Gibson Les Paul Standard",
+    "description": "Gibson Les Paul Standard 50s Heritage Cherry Sunburst",
+    "start_price": 2000,
+    "reserve_price": 2500
+  },
+  {
+    "title": "Yamaha Grand Piano",
+    "description": "Yamaha C3 Grand Piano ebony polish",
+    "start_price": 45000,
+    "reserve_price": 60000
+  },
+  {
+    "title": "Mountain Bike Trek",
+    "description": "Trek Fuel EX 9.8 Full Suspension Mountain Bike",
+    "start_price": 3500,
+    "reserve_price": 4200
+  },
+  {
+    "title": "Road Bike Specialized",
+    "description": "Specialized Tarmac SL7 Pro Carbon Road Bike",
+    "start_price": 4200,
+    "reserve_price": 5000
+  },
+  {
+    "title": "Snowboard Burton Custom",
+    "description": "Burton Custom X Snowboard 158cm with bindings",
+    "start_price": 400,
+    "reserve_price": 550
+  },
+  {
+    "title": "Ski Set Rossignol",
+    "description": "Rossignol Experience 88 HD Skis with Bindings",
+    "start_price": 500,
+    "reserve_price": 700
+  },
+  {
+    "title": "Kayak Perception",
+    "description": "Perception Pescador Pro 12 Fishing Kayak",
+    "start_price": 800,
+    "reserve_price": 1000
+  },
+  {
+    "title": "Surfboard Channel Islands",
+    "description": "Channel Islands Rookie 15 Surfboard 6'2",
+    "start_price": 400,
+    "reserve_price": 550
+  },
+  {
+    "title": "Golf Club Set Titleist",
+    "description": "Titleist T300 Iron Set 4-PW with bag",
+    "start_price": 1200,
+    "reserve_price": 1500
+  },
+  {
+    "title": "Tennis Racket Wilson",
+    "description": "Wilson Pro Staff 97 V13 Tennis Racket",
+    "start_price": 180,
+    "reserve_price": 250
+  },
+  {
+    "title": "Basketball Spalding Official",
+    "description": "Spalding NBA Official Game Basketball",
+    "start_price": 50,
+    "reserve_price": 80
+  },
+  {
+    "title": "Football Helmet Riddell",
+    "description": "Riddell SpeedFlex Adult Football Helmet",
+    "start_price": 300,
+    "reserve_price": 400
+  },
+  {
+    "title": "Camping Tent REI",
+    "description": "REI Co-op Half Dome SL 2+ Tent",
+    "start_price": 250,
+    "reserve_price": 350
+  },
+  {
+    "title": "Sleeping Bag Patagonia",
+    "description": "Patagonia 850 Down Sleeping Bag 19°F",
+    "start_price": 400,
+    "reserve_price": 550
+  },
+  {
+    "title": "Backpack Osprey",
+    "description": "Osprey Atmos AG 65 Hiking Backpack",
+    "start_price": 200,
+    "reserve_price": 280
+  },
+  {
+    "title": "Hiking Boots Merrell",
+    "description": "Merrell Moab 3 Mid Waterproof Hiking Boots",
+    "start_price": 120,
+    "reserve_price": 180
+  },
+  {
+    "title": "Fishing Rod Shimano",
+    "description": "Shimano Stradic CI4+ 2500 Spinning Reel Combo",
+    "start_price": 250,
+    "reserve_price": 350
+  },
+  {
+    "title": "Toolbox Snap-on",
+    "description": "Snap-on Classic 78 11-Drawer Triple Bank Roll Cab",
+    "start_price": 8000,
+    "reserve_price": 10000
+  },
+  {
+    "title": "Drill Set DeWalt",
+    "description": "DeWalt 20V MAX Cordless Drill Driver Kit",
+    "start_price": 120,
+    "reserve_price": 180
+  },
+  {
+    "title": "Saw Circular Makita",
+    "description": "Makita 18V LXT Lithium-Ion Cordless Circular Saw",
+    "start_price": 150,
+    "reserve_price": 220
+  },
+  {
+    "title": "Wrench Set Craftsman",
+    "description": "Craftsman 450-Piece Mechanic's Tool Set",
+    "start_price": 300,
+    "reserve_price": 400
+  },
+  {
+    "title": "Ladder Extension Werner",
+    "description": "Werner 28-ft Aluminum Extension Ladder",
+    "start_price": 200,
+    "reserve_price": 280
+  },
+  {
+    "title": "Generator Honda",
+    "description": "Honda EU3000iS 3000-Watt Portable Inverter Generator",
+    "start_price": 1800,
+    "reserve_price": 2200
+  },
+  {
+    "title": "Pressure Washer Ryobi",
+    "description": "Ryobi 3100 PSI Electric Pressure Washer",
+    "start_price": 250,
+    "reserve_price": 350
+  },
+  {
+    "title": "Lawn Mower Honda",
+    "description": "Honda HRX217VKA 21-inch Self-Propelled Lawn Mower",
+    "start_price": 450,
+    "reserve_price": 600
+  },
+  {
+    "title": "Leaf Blower Stihl",
+    "description": "Stihl BR 700 Backpack Leaf Blower",
+    "start_price": 500,
+    "reserve_price": 650
+  },
+  {
+    "title": "Chainsaw Husqvarna",
+    "description": "Husqvarna 460 Rancher 20-inch Gas Chainsaw",
+    "start_price": 400,
+    "reserve_price": 550
+  },
+  {
+    "title": "Art Painting Original",
+    "description": "Original Oil Painting Landscape 24x36 inches",
+    "start_price": 800,
+    "reserve_price": 1200
+  },
+  {
+    "title": "Sculpture Bronze Vintage",
+    "description": "Vintage Bronze Horse Sculpture 12 inches tall",
+    "start_price": 600,
+    "reserve_price": 900
+  },
+  {
+    "title": "Pottery Vase Handmade",
+    "description": "Handmade Ceramic Vase Blue Glaze 18 inches",
+    "start_price": 150,
+    "reserve_price": 250
+  },
+  {
+    "title": "Jewelry Diamond Ring",
+    "description": "14K White Gold 1.5 Carat Diamond Engagement Ring",
+    "start_price": 3000,
+    "reserve_price": 4500
+  },
+  {
+    "title": "Necklace Pearl Cultured",
+    "description": "Cultured Pearl Necklace 18 inches with gold clasp",
+    "start_price": 500,
+    "reserve_price": 750
+  },
+  {
+    "title": "Watch Omega Speedmaster",
+    "description": "Omega Speedmaster Professional Moonwatch",
+    "start_price": 2500,
+    "reserve_price": 3500
+  },
+  {
+    "title": "Bracelet Tennis Gold",
+    "description": "14K Gold Tennis Bracelet with Diamonds",
+    "start_price": 1200,
+    "reserve_price": 1800
+  },
+  {
+    "title": "Earrings Sapphire Blue",
+    "description": "Blue Sapphire and Diamond Stud Earrings",
+    "start_price": 800,
+    "reserve_price": 1200
+  },
+  {
+    "title": "Coin Collection Silver",
+    "description": "Morgan Silver Dollar Collection 1878-1921",
+    "start_price": 2000,
+    "reserve_price": 3000
+  },
+  {
+    "title": "Stamp Collection Vintage",
+    "description": "Vintage US Stamp Collection 1900-1950",
+    "start_price": 500,
+    "reserve_price": 800
+  },
+  {
+    "title": "Baseball Card Babe Ruth",
+    "description": "1933 Goudey Babe Ruth Baseball Card #144",
+    "start_price": 5000,
+    "reserve_price": 8000
+  },
+  {
+    "title": "Comic Book Superman #1",
+    "description": "Superman #1 DC Comics 1939 Reproduction",
+    "start_price": 200,
+    "reserve_price": 350
+  },
+  {
+    "title": "Action Figure Star Wars",
+    "description": "Vintage Star Wars Luke Skywalker Figure 1977",
+    "start_price": 150,
+    "reserve_price": 250
+  },
+  {
+    "title": "Book First Edition",
+    "description": "To Kill a Mockingbird First Edition 1960",
+    "start_price": 1500,
+    "reserve_price": 2500
+  },
+  {
+    "title": "Vinyl Record Beatles",
+    "description": "The Beatles White Album Original Pressing 1968",
+    "start_price": 300,
+    "reserve_price": 500
+  },
+  {
+    "title": "Movie Poster Casablanca",
+    "description": "Original Casablanca Movie Poster 1942",
+    "start_price": 2000,
+    "reserve_price": 3500
+  },
+  {
+    "title": "Antique Clock Grandfather",
+    "description": "Howard Miller Westminster Chime Grandfather Clock",
+    "start_price": 1800,
+    "reserve_price": 2500
+  },
+  {
+    "title": "Furniture Dining Set Oak",
+    "description": "Solid Oak Dining Table with 6 Chairs",
+    "start_price": 1200,
+    "reserve_price": 1800
+  },
+  {
+    "title": "Sofa Leather Brown",
+    "description": "Italian Leather Sectional Sofa Brown",
+    "start_price": 2000,
+    "reserve_price": 2800
+  },
+  {
+    "title": "Desk Executive Mahogany",
+    "description": "Executive Mahogany Office Desk with drawers",
+    "start_price": 800,
+    "reserve_price": 1200
+  },
+  {
+    "title": "Bookshelf Solid Wood",
+    "description": "Solid Wood 7-Shelf Bookcase Cherry Finish",
+    "start_price": 400,
+    "reserve_price": 600
+  },
+  {
+    "title": "Mirror Antique Victorian",
+    "description": "Victorian Ornate Gold Frame Mirror 36x48",
+    "start_price": 600,
+    "reserve_price": 900
+  },
+  {
+    "title": "Chandelier Crystal Vintage",
+    "description": "Vintage Crystal Chandelier 12 Light Fixture",
+    "start_price": 800,
+    "reserve_price": 1200
+  },
+  {
+    "title": "Rug Persian Handwoven",
+    "description": "Handwoven Persian Rug 8x10 feet wool",
+    "start_price": 1500,
+    "reserve_price": 2500
+  },
+  {
+    "title": "Curtains Silk Custom",
+    "description": "Custom Silk Curtain Panels 96 inches long",
+    "start_price": 300,
+    "reserve_price": 500
+  },
+  {
+    "title": "Pillow Set Decorative",
+    "description": "Set of 4 Decorative Throw Pillows Velvet",
+    "start_price": 80,
+    "reserve_price": 150
+  },
+  {
+    "title": "Dress Designer Evening",
+    "description": "Designer Evening Gown Black Silk Size 8",
+    "start_price": 400,
+    "reserve_price": 650
+  },
+  {
+    "title": "Suit Men's Armani",
+    "description": "Armani Men's Wool Suit Navy Blue 42R",
+    "start_price": 600,
+    "reserve_price": 900
+  },
+  {
+    "title": "Shoes Louboutin Heels",
+    "description": "Christian Louboutin Red Bottom Heels Size 8",
+    "start_price": 400,
+    "reserve_price": 650
+  },
+  {
+    "title": "Handbag Louis Vuitton",
+    "description": "Louis Vuitton Neverfull MM Monogram Canvas",
+    "start_price": 800,
+    "reserve_price": 1200
+  },
+  {
+    "title": "Scarf Hermes Silk",
+    "description": "Hermes Silk Scarf Vintage Design 90cm",
+    "start_price": 200,
+    "reserve_price": 350
+  },
+  {
+    "title": "Jacket Leather Harley",
+    "description": "Harley Davidson Leather Motorcycle Jacket XL",
+    "start_price": 300,
+    "reserve_price": 450
+  },
+  {
+    "title": "Boots Cowboy Tony Lama",
+    "description": "Tony Lama Cowboy Boots Exotic Leather Size 10",
+    "start_price": 200,
+    "reserve_price": 350
+  },
+  {
+    "title": "Hat Stetson Western",
+    "description": "Stetson 6X Beaver Felt Cowboy Hat Black",
+    "start_price": 150,
+    "reserve_price": 250
+  },
+  {
+    "title": "Tie Collection Silk",
+    "description": "Collection of 20 Designer Silk Neckties",
+    "start_price": 200,
+    "reserve_price": 350
+  },
+  {
+    "title": "Sunglasses Oakley Sports",
+    "description": "Oakley Holbrook XL Polarized Sunglasses",
+    "start_price": 100,
+    "reserve_price": 160
+  },
+  {
+    "title": "Cookware Set All-Clad",
+    "description": "All-Clad Stainless Steel 10-Piece Cookware Set",
+    "start_price": 450,
+    "reserve_price": 650
+  },
+  {
+    "title": "Knife Set Wusthof",
+    "description": "Wusthof Classic 8-Piece Knife Block Set",
+    "start_price": 300,
+    "reserve_price": 450
+  },
+  {
+    "title": "Mixer KitchenAid Professional",
+    "description": "KitchenAid Professional 6-Qt Stand Mixer Red",
+    "start_price": 350,
+    "reserve_price": 500
+  },
+  {
+    "title": "Refrigerator Sub-Zero",
+    "description": "Sub-Zero 48-inch Built-in Side-by-Side Refrigerator",
+    "start_price": 8000,
+    "reserve_price": 12000
+  },
+  {
+    "title": "Range Viking Professional",
+    "description": "Viking Professional 36-inch Gas Range Stainless",
+    "start_price": 4000,
+    "reserve_price": 6000
+  },
+  {
+    "title": "Dishwasher Miele",
+    "description": "Miele G7316SCU AutoDos Dishwasher Stainless Steel",
+    "start_price": 1200,
+    "reserve_price": 1800
+  },
+  {
+    "title": "Microwave Breville Combi",
+    "description": "Breville Combi Wave 3-in-1 Microwave",
+    "start_price": 300,
+    "reserve_price": 450
+  },
+  {
+    "title": "Toaster Dualit Classic",
+    "description": "Dualit Classic 4-Slice Toaster Chrome",
+    "start_price": 200,
+    "reserve_price": 300
+  },
+  {
+    "title": "Grinder Baratza Coffee",
+    "description": "Baratza Virtuoso+ Conical Burr Coffee Grinder",
+    "start_price": 200,
+    "reserve_price": 300
+  },
+  {
+    "title": "Scale Digital Kitchen",
+    "description": "OXO Good Grips 11-Pound Food Scale",
+    "start_price": 40,
+    "reserve_price": 70
+  },
+  {
+    "title": "Car Classic Mustang",
+    "description": "1967 Ford Mustang Fastback V8 Restored",
+    "start_price": 35000,
+    "reserve_price": 50000
+  },
+  {
+    "title": "Motorcycle Harley Sportster",
+    "description": "2020 Harley Davidson Sportster Iron 883",
+    "start_price": 8000,
+    "reserve_price": 11000
+  },
+  {
+    "title": "Boat Fishing Bass",
+    "description": "2019 Bass Tracker Pro Team 175 TF",
+    "start_price": 15000,
+    "reserve_price": 20000
+  },
+  {
+    "title": "RV Class A Motorhome",
+    "description": "2018 Winnebago Vista 32YE Class A Motorhome",
+    "start_price": 85000,
+    "reserve_price": 110000
+  },
+  {
+    "title": "Trailer Utility Enclosed",
+    "description": "7x16 Enclosed Cargo Trailer V-Nose Ramp Door",
+    "start_price": 4000,
+    "reserve_price": 5500
+  },
+  {
+    "title": "ATV Polaris Ranger",
+    "description": "2021 Polaris Ranger XP 1000 Premium UTV",
+    "start_price": 12000,
+    "reserve_price": 16000
+  },
+  {
+    "title": "Jet Ski Sea-Doo",
+    "description": "2020 Sea-Doo GTI SE 170 Personal Watercraft",
+    "start_price": 8000,
+    "reserve_price": 11000
+  },
+  {
+    "title": "Snowmobile Ski-Doo",
+    "description": "2021 Ski-Doo Summit X 850 E-TEC Turbo",
+    "start_price": 12000,
+    "reserve_price": 16000
+  },
+  {
+    "title": "Tractor John Deere",
+    "description": "John Deere 3025E Compact Utility Tractor",
+    "start_price": 18000,
+    "reserve_price": 24000
+  },
+  {
+    "title": "Mower Zero Turn Exmark",
+    "description": "Exmark Lazer Z X-Series 60-inch Zero Turn Mower",
+    "start_price": 8000,
+    "reserve_price": 11000
+  },
+  {
+    "title": "Wine Collection Vintage",
+    "description": "Vintage Bordeaux Wine Collection 1995-2005",
+    "start_price": 2000,
+    "reserve_price": 3500
+  },
+  {
+    "title": "Whiskey Bottle Macallan",
+    "description": "Macallan 25 Year Single Malt Scotch Whisky",
+    "start_price": 1500,
+    "reserve_price": 2500
+  },
+  {
+    "title": "Champagne Dom Perignon",
+    "description": "Dom Perignon Vintage 2010 Champagne Magnum",
+    "start_price": 400,
+    "reserve_price": 600
+  },
+  {
+    "title": "Humidor Cigar Cuban",
+    "description": "Cuban Mahogany Cigar Humidor with 50 Cigars",
+    "start_price": 800,
+    "reserve_price": 1200
+  },
+  {
+    "title": "Coffee Beans Kona Hawaiian",
+    "description": "100% Kona Coffee Beans Medium Roast 5 pounds",
+    "start_price": 200,
+    "reserve_price": 300
+  },
+  {
+    "title": "Tea Set Chinese Porcelain",
+    "description": "Antique Chinese Porcelain Tea Set 15 pieces",
+    "start_price": 600,
+    "reserve_price": 900
+  },
+  {
+    "title": "Spice Collection Gourmet",
+    "description": "Gourmet Spice Collection 48 Varieties Glass Jars",
+    "start_price": 150,
+    "reserve_price": 250
+  },
+  {
+    "title": "Honey Raw Wildflower",
+    "description": "Raw Wildflower Honey 5 Gallon Bucket",
+    "start_price": 100,
+    "reserve_price": 160
+  },
+  {
+    "title": "Olive Oil Extra Virgin",
+    "description": "Estate Extra Virgin Olive Oil 500ml Bottles Set",
+    "start_price": 80,
+    "reserve_price": 130
+  },
+  {
+    "title": "Truffle Fresh Black",
+    "description": "Fresh Black Truffles Périgord 100 grams",
+    "start_price": 300,
+    "reserve_price": 500
+  },
+  {
+    "title": "Camera Vintage Leica",
+    "description": "Vintage Leica M3 35mm Film Camera with Lens",
+    "start_price": 2000,
+    "reserve_price": 3000
+  },
+  {
+    "title": "Lens Canon Telephoto",
+    "description": "Canon EF 70-200mm f/2.8L IS III USM Lens",
+    "start_price": 1800,
+    "reserve_price": 2200
+  },
+  {
+    "title": "Tripod Gitzo Carbon Fiber",
+    "description": "Gitzo GT3543XLS Carbon Fiber Tripod",
+    "start_price": 800,
+    "reserve_price": 1100
+  },
+  {
+    "title": "Drone Professional DJI",
+    "description": "DJI Inspire 2 Professional Quadcopter",
+    "start_price": 2500,
+    "reserve_price": 3500
+  },
+  {
+    "title": "Projector Epson 4K",
+    "description": "Epson Pro Cinema LS12000 4K Laser Projector",
+    "start_price": 4000,
+    "reserve_price": 5500
+  }
+]
