@@ -15,6 +15,11 @@ import fs from "fs";
 import addCommand from "./commands/add.js";
 import updateCommand from "./commands/update.js";
 import deleteCommand from "./commands/delete.js";
+import collectionsCommand from "./commands/collections.js";
+import countCommand from "./commands/count.js";
+import findCommand from "./commands/find.js";
+import statsCommand from "./commands/stats.js";
+import testCommand from "./commands/test.js";
 
 // Get current directory for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -179,27 +184,10 @@ async function main() {
     .description("List all collections in the database")
     .action(async () => {
       try {
-        logger.header("Database Collections");
-
-        const connected = await database.connect();
-        if (!connected) {
-          return;
-        }
-
-        const collections = await database.mongoose.connection.db.listCollections().toArray();
-
-        if (collections.length === 0) {
-          logger.info("No collections found in the database");
-        } else {
-          logger.success(`Found ${collections.length} collection(s):`);
-          collections.forEach((collection, index) => {
-            console.log(chalk.cyan(`${index + 1}. ${collection.name}`));
-          });
-        }
-
-        await database.disconnect();
+        await collectionsCommand();
       } catch (error) {
-        logger.error("Failed to list collections: " + error.message);
+        logger.error("Collections command failed: " + error.message);
+        process.exit(1);
       }
     });
 
@@ -214,36 +202,10 @@ async function main() {
     .option("-q, --query <json>", "JSON query to count specific documents")
     .action(async (collection, options) => {
       try {
-        logger.header(`Counting documents in '${collection}' collection`);
-
-        const connected = await database.connect();
-        if (!connected) {
-          return;
-        }
-
-        const Model = database.getModel(collection);
-        let query = {};
-
-        if (options.query) {
-          try {
-            query = JSON.parse(options.query);
-          } catch (error) {
-            logger.error("Invalid JSON query: " + error.message);
-            return;
-          }
-        }
-
-        const count = await Model.countDocuments(query);
-
-        logger.success(`Document count: ${count}`);
-        if (Object.keys(query).length > 0) {
-          logger.info("Query used:");
-          logger.data(query);
-        }
-
-        await database.disconnect();
+        await countCommand(collection, options);
       } catch (error) {
-        logger.error("Failed to count documents: " + error.message);
+        logger.error("Count command failed: " + error.message);
+        process.exit(1);
       }
     });
 
@@ -261,57 +223,10 @@ async function main() {
     .option("-s, --sort <json>", "Sort results (e.g., '{\"createdAt\": -1}')")
     .action(async (collection, options) => {
       try {
-        logger.header(`Finding documents in '${collection}' collection`);
-
-        const connected = await database.connect();
-        if (!connected) {
-          return;
-        }
-
-        const Model = database.getModel(collection);
-        let query = {};
-        let sort = {};
-
-        if (options.query) {
-          try {
-            query = JSON.parse(options.query);
-          } catch (error) {
-            logger.error("Invalid JSON query: " + error.message);
-            return;
-          }
-        }
-
-        if (options.sort) {
-          try {
-            sort = JSON.parse(options.sort);
-          } catch (error) {
-            logger.error("Invalid JSON sort: " + error.message);
-            return;
-          }
-        }
-
-        const documents = await Model.find(query)
-          .sort(sort)
-          .limit(parseInt(options.limit))
-          .skip(parseInt(options.skip));
-
-        if (documents.length === 0) {
-          logger.warning("No documents found matching the criteria");
-          if (Object.keys(query).length > 0) {
-            logger.info("Query used:");
-            logger.data(query);
-          }
-        } else {
-          logger.success(`Found ${documents.length} document(s):`);
-          documents.forEach((doc, index) => {
-            console.log(chalk.cyan(`\nDocument ${index + 1}:`));
-            logger.data(doc.toObject());
-          });
-        }
-
-        await database.disconnect();
+        await findCommand(collection, options);
       } catch (error) {
-        logger.error("Failed to find documents: " + error.message);
+        logger.error("Find command failed: " + error.message);
+        process.exit(1);
       }
     });
 
@@ -321,36 +236,10 @@ async function main() {
     .description("Show CLI usage statistics and database info")
     .action(async () => {
       try {
-        logger.header("CLI Statistics & Database Info");
-
-        // Show CLI statistics
-        const stats = config.getStats();
-        console.log(chalk.bold("📊 CLI Usage Statistics:"));
-        console.log(`  Add operations: ${chalk.green(stats.operations.add)}`);
-        console.log(`  Update operations: ${chalk.yellow(stats.operations.update)}`);
-        console.log(`  Delete operations: ${chalk.red(stats.operations.delete)}`);
-        console.log(`  Last used collection: ${chalk.cyan(stats.lastUsedCollection)}`);
-        console.log(
-          `  Last connection: ${
-            stats.lastConnection ? new Date(stats.lastConnection).toLocaleString() : "Never"
-          }`
-        );
-
-        logger.separator();
-
-        // Test database connection
-        const connectionTest = await database.testConnection();
-        if (connectionTest.success) {
-          logger.success("Database connection: OK");
-          console.log(`  Database URI: ${chalk.gray(process.env.MONGODB_URI)}`);
-        } else {
-          logger.error("Database connection: FAILED");
-          logger.error(connectionTest.message);
-        }
-
-        await database.disconnect();
+        await statsCommand();
       } catch (error) {
-        logger.error("Failed to get statistics: " + error.message);
+        logger.error("Stats command failed: " + error.message);
+        process.exit(1);
       }
     });
 
@@ -360,22 +249,10 @@ async function main() {
     .description("Test database connection")
     .action(async () => {
       try {
-        logger.header("Testing Database Connection");
-
-        const result = await database.testConnection();
-
-        if (result.success) {
-          logger.success(result.message);
-          logger.info("Connection details:");
-          logger.data(result.details);
-        } else {
-          logger.error(result.message);
-          logger.error("Error: " + result.error);
-        }
-
-        await database.disconnect();
+        await testCommand();
       } catch (error) {
-        logger.error("Connection test failed: " + error.message);
+        logger.error("Test command failed: " + error.message);
+        process.exit(1);
       }
     });
 
