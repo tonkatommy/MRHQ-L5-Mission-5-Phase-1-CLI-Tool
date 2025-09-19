@@ -14,9 +14,9 @@ class Database {
 
     // Set default MongoDB URI if not provided
     if (!process.env.MONGODB_URI) {
-      process.env.MONGODB_URI = "mongodb://127.0.0.1:27017/testdb";
+      process.env.MONGODB_URI = "mongodb://127.0.0.1:27017/mission-5";
       Logger.warning(
-        "No MONGODB_URI found in .env, using default: mongodb://127.0.0.1:27017/testdb"
+        "No MONGODB_URI found in .env, using default: mongodb://127.0.0.1:27017/mission-5"
       );
     }
   }
