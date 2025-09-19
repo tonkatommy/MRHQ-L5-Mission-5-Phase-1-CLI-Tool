@@ -1,12 +1,6 @@
 import mongoose from "mongoose";
 import Logger from "./logger.js";
 import config from "./config.js";
-import path from "path";
-import { fileURLToPath } from "url";
-
-// Get the directory where this file is located
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 class Database {
   constructor() {
     this.isConnected = false;
