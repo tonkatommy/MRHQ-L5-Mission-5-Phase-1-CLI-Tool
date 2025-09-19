@@ -1,4 +1,3 @@
-// import { green, red, yellow, blue, cyan, gray, bold } from "chalk";
 import chalk from "chalk";
 
 // Logger utility for styled console output
