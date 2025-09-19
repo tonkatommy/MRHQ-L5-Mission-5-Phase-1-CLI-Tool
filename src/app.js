@@ -28,7 +28,11 @@ const findEnvFile = () => {
     // 2. In the same directory as the executable
     path.resolve(__dirname, ".env"),
     // 3. In user's home directory (global config)
-    path.resolve(process.env.HOME || process.env.USERPROFILE, "MongoDB-CLI-Tool", ".mongo-cli.env"),
+    path.resolve(
+      process.env.HOME || process.env.USERPROFILE,
+      "mongodb-cli-tool/",
+      ".mongo-cli.env"
+    ),
     // 4. Current working directory
     path.resolve(process.cwd(), ".env"),
   ];
@@ -99,9 +103,9 @@ async function main() {
     .command("add <collection>")
     .description(
       "Add a new document to the specified collection\n" +
-        "  Example: mongo-cli add users\n" +
-        '  Example: mongo-cli add users -d \'{"name":"John","age":30}\'\n' +
-        "  Example: mongo-cli add users --file ./data/users.json"
+        "  - mongo-cli add users\n" +
+        '  - mongo-cli add users -d \'{"name":"John","age":30}\'\n' +
+        "  - mongo-cli add users --file ./data/users.json"
     )
     .option("-d, --data <json>", "JSON data for the document (non-interactive mode)")
     .option("-f, --file <path>", "Path to JSON file containing document(s) to add")
@@ -123,8 +127,8 @@ async function main() {
     .command("update <collection>")
     .description(
       "Update documents in the specified collection\n" +
-        "  Example: mongo-cli update users\n" +
-        '  Example: mongo-cli update users -q \'{"name":"John"}\' -d \'{"age":31}\''
+        "  - mongo-cli update users\n" +
+        '  - mongo-cli update users -q \'{"name":"John"}\' -d \'{"age":31}\''
     )
     .option("-q, --query <json>", "JSON query to find documents to update")
     .option("-d, --data <json>", "JSON data for the update")
@@ -147,8 +151,8 @@ async function main() {
     .alias("del")
     .description(
       "Delete documents from the specified collection\n" +
-        "  Example: mongo-cli delete users\n" +
-        '  Example: mongo-cli delete users -q \'{"status":"inactive"}\''
+        "  - mongo-cli delete users\n" +
+        '  - mongo-cli delete users -q \'{"status":"inactive"}\''
     )
     .option("-q, --query <json>", "JSON query to find documents to delete")
     .option("--force", "Skip confirmation prompts (DANGEROUS!)")
@@ -204,8 +208,8 @@ async function main() {
     .command("count <collection>")
     .description(
       "Count documents in the specified collection\n" +
-        "  Example: mongo-cli count users\n" +
-        '  Example: mongo-cli count users -q \'{"status":"active"}\''
+        "  - mongo-cli count users\n" +
+        '  - mongo-cli count users -q \'{"status":"active"}\''
     )
     .option("-q, --query <json>", "JSON query to count specific documents")
     .action(async (collection, options) => {
@@ -248,8 +252,8 @@ async function main() {
     .command("find <collection>")
     .description(
       "Find and display documents from the specified collection\n" +
-        "  Example: mongo-cli find users\n" +
-        '  Example: mongo-cli find users -q \'{"age":{"$gte":18}}\' -l 5'
+        "  - mongo-cli find users\n" +
+        '  - mongo-cli find users -q \'{"age":{"$gte":18}}\' -l 5'
     )
     .option("-q, --query <json>", "JSON query to find specific documents")
     .option("-l, --limit <number>", "Limit number of results (default: 10)", "10")

@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 // Setup global configuration
 function setupGlobalConfig() {
   const homeDir = process.env.HOME || process.env.USERPROFILE;
-  const globalDir = path.join(homeDir, "MongoDB-CLI-Tool");
+  const globalDir = path.join(homeDir, "mongodb-cli-tool");
   const globalEnvPath = path.join(globalDir, ".mongo-cli.env");
   const globalConfigPath = path.join(globalDir, ".mongo-cli-config.json");
 
